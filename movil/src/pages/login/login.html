@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Intercoding 4.0
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+
+    <img src="../../assets/imgs/intercoding.jpeg" class="small" alt="Intercoding">
+    <form [formGroup]="ngForm" (ngSubmit)="login()">
+
+
+        <div padding-right padding-left>
+
+          <ion-item>
+            <ion-icon name="person" item-start></ion-icon>
+            <ion-label stacked>Usuario</ion-label>
+            <ion-input type="text" formControlName="usuario"></ion-input>
+          </ion-item>
+
+          <br>
+          <ion-item>
+            <ion-icon name="eye" item-start></ion-icon>
+            <ion-label stacked>Contraseña</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+        </div>
+
+        <div padding>
+
+          <button ion-button color="primary" block>
+            Ingresar
+          </button>
+
+        </div>
+
+
+      </form>
+
+  </ion-card>
+</ion-content>

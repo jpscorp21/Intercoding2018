@@ -1,0 +1,26 @@
+page-login {
+
+  h3 {
+    margin-top: 20px !important;
+    font-weight: bold !important;
+    font-size: 3rem !important;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    font-family: "Montserrat";
+  }
+
+  ion-input {
+    border-bottom: 1px solid #333 !important;
+  }
+
+  @media only screen and (min-width: 600px) {
+    ion-card {
+
+      width: 500px !important;
+      margin: 30px auto !important;
+
+    }
+  }
+
+
+}

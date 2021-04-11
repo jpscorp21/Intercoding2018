@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Lenguajes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <button ion-item (click)="atras()"><ion-icon name="return-left" item-left></ion-icon> Atras</button>
+    <button ion-item (click)="goToDetalle(lenguaje)" *ngFor="let lenguaje of lenguajes">
+      <ion-icon name="cloudy" item-left></ion-icon> {{ lenguaje.nombre }}
+    </button>
+
+
+  </ion-list>
+
+</ion-content>

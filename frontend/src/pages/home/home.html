@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="verde">
+    <ion-title>
+      {{ titulo }}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <p>{{ texto }}</p>
+  <button ion-button>Mostrar</button>
+  <button ion-button color="danger" full>Calificar</button>
+  <button ion-buttons color="secondary" full strong>Leer</button>
+  <button ion-button color="light" outline full>Consultar</button>
+  <button ion-button color="dark" large>Reeleccion</button>
+
+
+  <button ion-button color="dark" full (click)="goToLenguaje()">Lenguajes</button>
+  <button ion-button color="dark" full (click)="goToPaises()">Paises</button>
+
+</ion-content>

@@ -1,0 +1,41 @@
+page-inicio {
+
+
+
+  .titulo {
+    font-family: "Montserrat";
+    font-size: 3rem !important;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  ion-card {
+    transition: 0.3s;
+    cursor: pointer;
+
+    ion-item {
+      font-size: 2rem !important;
+    }
+  }
+
+
+
+  ion-card:hover {
+    transform: scale(1.05);
+  }
+
+
+  .titulo_footer .toolbar-title {
+
+    font-size: 1.6rem !important;
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+  }
+
+
+}
+

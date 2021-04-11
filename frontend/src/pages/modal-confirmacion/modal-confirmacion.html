@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mensaje del Sistema</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="cancelar()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <img src="../../assets/imgs/intercoding.jpeg" alt="Intercoding" class="small">
+  <p> {{ mensaje }} </p>
+  <div padding-left padding-right>
+    <button ion-button (click)="aceptar()" color="primary" full>Aceptar</button>
+  </div>
+  <br>
+  <div padding-left padding-right>
+    <button ion-button (click)="cancelar()" color="primary" full>Cancelar</button>
+  </div>
+
+
+</ion-content>

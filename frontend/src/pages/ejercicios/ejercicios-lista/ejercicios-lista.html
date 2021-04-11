@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Intercoding 4.0
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-item style="background: #448AFF; color: white;">
+    <ion-icon name="person" item-start></ion-icon>
+    <ion-label>{{ apellido | uppercase }} {{ nombre | uppercase }}</ion-label>
+  </ion-item>
+
+  <progress-bar [numero]="counts"></progress-bar>
+  <h3 text-center style="font-size: 20px !important;" *ngIf="counts < 10;">Seleccionar un ejercicio</h3>
+  <h3 text-center style="font-size: 20px !important;" *ngIf="counts >= 10;">Ejercicios completados exitosamente</h3>
+  <div *ngIf="ejercicios.length !== 0">
+
+
+
+    <ion-list *ngIf="ejercicios.length !== 0" class="animated slideInUp">
+
+      <ion-card *ngFor="let eje of ejercicios">
+
+
+        <ion-card-content *ngIf="eje">
+
+          <ion-row>
+            <ion-col col-12 col-sm-12 col-md-9>
+              <div [ngSwitch]="eje.grado_dificultad" style="margin-top: 15px !important">
+                <div *ngSwitchCase="3">
+                  <div class="dificultad">Alta</div>
+                  <h3>{{ eje.titulo }}</h3>
+                </div>
+                <div *ngSwitchCase="2">
+                  <div class="dificultad green">Media</div>
+                  <h3>{{ eje.titulo }}</h3>
+                </div>
+                <div *ngSwitchCase="1">
+                  <div class="dificultad blue">Baja</div>
+                  <h3>{{ eje.titulo }}</h3>
+
+                </div>
+
+
+              </div>
+            </ion-col>
+            <ion-col col-12 col-sm-12 col-md-3>
+              <ion-item>
+                <button ion-button icon-start item-end (click)="botonVerEjercicio(eje)" block>
+                  <ion-icon name="eye"></ion-icon> Ver ejercicio
+                </button>
+
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-list>
+
+  </div>
+</ion-content>

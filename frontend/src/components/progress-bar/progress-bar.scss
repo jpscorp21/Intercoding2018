@@ -1,0 +1,37 @@
+progress-bar {
+
+  .container {
+    width: 50%;
+    margin: auto;
+  }
+
+  #progreso {
+    width: 100%;
+    background-color: #ccc;
+
+  }
+
+  #barra {
+    width: 1%;
+    height: 25px;
+    -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+    -webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+    box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+    background-color: color($colors, primary);
+	  background-image: -webkit-gradient(linear, left top, left bottom, from(color($colors, verde)), to(#388E3C));
+	  background-image: -webkit-linear-gradient(top, color($colors, verde), #388E3C);
+	  background-image: -moz-linear-gradient(top, color($colors, verde), #388E3C);
+	  background-image: -ms-linear-gradient(top, color($colors, verde), #388E3C);
+	  background-image: -o-linear-gradient(top, color($colors, verde), #388E3C);
+	  background-image: linear-gradient(top, color($colors, verde), #388E3C);
+
+    .label {
+      position: absolute;
+      color: black;
+      left: 50%;
+      top: 3%;
+      transform: translateX(-50%);
+    }
+  }
+
+}

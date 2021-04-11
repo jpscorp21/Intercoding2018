@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Intercoding 4.0
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <button ion-button (click)="alertaCategoria()">Categoria</button>
+    <button ion-button (click)="alertaDificultad()">Dificultad</button>
+  </div>
+  <ion-list *ngIf="ejercicios.length !== 0">
+
+    <ion-card *ngFor="let eje of ejercicios">
+
+
+      <ion-card-content>
+
+        <div [ngSwitch]="eje.cod_categoria" style="margin-top: 15px !important">
+          <div *ngSwitchCase="1">
+            <h3>Categoria Junior</h3>
+          </div>
+          <div *ngSwitchCase="2">
+            <h3>Categoria Senior</h3>
+          </div>
+        </div>
+
+        <ion-row>
+              <ion-col col-12 col-sm-12 col-md-9>
+              <div [ngSwitch]="eje.grado_dificultad" style="margin-top: 15px !important">
+                  <div *ngSwitchCase="3">
+                    <div class="dificultad">Alta</div>
+                    <h3>{{ eje.titulo }}</h3>
+                  </div>
+                  <div *ngSwitchCase="2">
+                    <div class="dificultad green">Media</div>
+                    <h3>{{ eje.titulo }}</h3>
+                  </div>
+                  <div *ngSwitchCase="1">
+                    <div class="dificultad blue">Baja</div>
+                    <h3>{{ eje.titulo }}</h3>
+                  </div>
+              </div>
+
+          </ion-col>
+          <ion-col col-12 col-sm-12 col-md-3>
+              <ion-item>
+                <button ion-button icon-start item-end block (click)="navCtrl.push('EjerciciosCorreccionDetallePage', {ejercicio: eje})">
+                  <ion-icon name="eye"></ion-icon> Ver ejercicio
+                </button>
+
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+          </ion-card-content>
+
+
+    </ion-card>
+
+  </ion-list>
+
+
+</ion-content>

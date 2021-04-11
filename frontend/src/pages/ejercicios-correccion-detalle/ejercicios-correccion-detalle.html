@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Intercoding 4.0</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding *ngIf="ejercicio">
+
+  <ion-card class="animated fadeIn">
+
+
+    <ion-card-content>
+
+        <div [ngSwitch]="ejercicio.grado_dificultad">
+          <div *ngSwitchCase="3">
+            <div class="dificultad">Alta</div>
+            <h3>{{ ejercicio.titulo }}</h3>
+          </div>
+          <div *ngSwitchCase="2">
+            <div class="dificultad green">Media</div>
+            <h3>{{ ejercicio.titulo }}</h3>
+          </div>
+          <div *ngSwitchCase="1">
+            <div class="dificultad blue">Baja</div>
+            <h3>{{ ejercicio.titulo }}</h3>
+          </div>
+          <div *ngSwitchDefault>
+            <div class="dificultad blue">?</div>
+            <h3>{{ ejercicio.titulo }}</h3>
+          </div>
+      </div>
+
+      <h4>Detalle del Problema</h4>
+      <hr>
+      <p>{{ejercicio.descripcion}}</p>
+
+      <h4>Ejemplo</h4>
+      <hr>
+      <p>{{ejercicio.ejemplo}}</p>
+      <div *ngIf="ejercicio.imagenes.length !== 0">
+        <div *ngFor="let imagen of ejercicio.imagenes">
+          <img [src]="_DomSanitizer.bypassSecurityTrustUrl('data:image;base64,' + imagen.imagen_string)" *ngIf="imagen">
+        </div>
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

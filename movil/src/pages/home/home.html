@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>
+      Intercoding 4.0
+    </ion-title>
+    <ion-buttons end>
+       <button ion-button icon-only (click) = "navCtrl.setRoot('LoginPage')">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src="../../assets/imgs/intercoding.jpeg" class="small" alt="Intercoding">
+  <p>
+
+    <button ion-button color = "ligth" full (click) = "openConcursantes('Senior')">Senior</button>
+    <button ion-button color = "ligth" full (click) = "openConcursantes('Junior')">Junior</button>
+
+  </p>
+</ion-content>

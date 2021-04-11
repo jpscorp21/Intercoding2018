@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Concursantes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding *ngIf = "concursantes">
+    <h3>{{ concursantes.nombre | uppercase }} {{ concursantes.apellido | uppercase }}</h3>
+    <p><strong>Usuario:</strong> {{concursantes.usuario | uppercase}}</p>
+    <p><strong>Ejercicio:</strong> {{ concursantes.titulo | uppercase}}</p>
+    <p></p>
+    <button ion-button color = "secondary" full (click)="abrirAlerta()">Corregir</button>
+    <button ion-button color = "danger" full (click)="abrirAlertaRechazar()">Rechazar</button>
+</ion-content>

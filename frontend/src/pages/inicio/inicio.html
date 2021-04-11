@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Intercoding</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding margin-bottom>
+
+  <h3 class="titulo">Bienvenido a la Aplicación</h3>
+
+  <ion-grid class="animated fadeIn" style="margin: auto !important;">
+    <ion-row>
+      <ion-col col-sm-6 col-md-4 col-lg-3>
+        <ion-card (click)="navCtrl.setRoot('EjerciciosListaPage')" color="verde">
+          <ion-card-content>
+            <ion-item color="verde">
+
+              Comenzar
+              <ion-icon name="code" item-right></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <!-- <ion-col col-sm-6 col-md-4 col-lg-3>
+        <ion-card color="celeste1">
+          <ion-card-content>
+            <ion-item color="celeste1">
+
+              Ayuda
+              <ion-icon name="alert" item-right></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-sm-6 col-md-4 col-lg-3>
+        <ion-card color="lila1">
+          <ion-card-content>
+            <ion-item color="lila1">
+
+              Opciones
+              <ion-icon name="settings" item-right></ion-icon>
+            </ion-item>
+
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col> -->
+      <!-- <ion-col  col-sm-6 col-md-4 col-lg-3>
+        <ion-card (click)="navCtrl.setRoot('EjerciciosCorreccionPage')" color="danger">
+          <ion-card-content>
+            <ion-item color="danger">
+
+              Correcciones
+              <ion-icon name="exit" item-right></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col> -->
+      <ion-col  col-sm-6 col-md-4 col-lg-3>
+        <ion-card (click)="navCtrl.setRoot('LoginPage')" color="danger">
+          <ion-card-content>
+            <ion-item color="danger">
+
+              Salir
+              <ion-icon name="exit" item-right></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="titulo_footer">Intercoding 2018</ion-title>
+  </ion-toolbar>
+</ion-footer>

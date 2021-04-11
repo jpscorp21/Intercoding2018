@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Concursantes</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="correccionesService.fetchAll()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <h1 padding-left>{{categoria}}</h1>
+<ion-list *ngIf="correccionesService.concursantes">
+
+
+<button ion-item no-lines (click)="openAlert(c)" *ngFor="let c of correccionesService.concursantes ">
+  <ion-icon name="person" item-left></ion-icon>
+  <ion-icon name="time" item-right color ="primary"></ion-icon>
+  <ion-label class="nombre">{{c.nombre}} {{c.apellido}} </ion-label>
+
+
+  </button>
+</ion-list>
+
+</ion-content>

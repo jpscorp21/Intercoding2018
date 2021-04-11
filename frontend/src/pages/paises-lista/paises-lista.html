@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Paises</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <button ion-item *ngFor="let pais of paises">
+      <ion-avatar item-left>
+        <img [src]="pais.flag">
+      </ion-avatar>
+      {{ pais.name }} - {{ pais.capital }}
+      <ion-note end>{{ pais.populate }}</ion-note>
+    </button>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,51 @@
+page-ejercicios-lista {
+
+  button {
+    padding: 18px 15px !important;
+  }
+
+  progress-bar {
+    margin-left: 30px !important;
+    padding: 10px;
+  }
+
+  div.dificultad {
+
+    color: white !important;
+    letter-spacing: 0.5px;
+    float: left;
+    margin-right: 12px;
+    width: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: 10px;
+    font-size: 15px !important;
+    font-weight: bold;
+    box-shadow: 2px 2px #aaa;
+    background: red;
+  }
+
+  div.dificultad.red {
+    background-color: color($colors, danger);
+  }
+
+  div.dificultad.blue {
+    background-color: color($colors, primary3);
+  }
+
+  div.dificultad.green {
+    background-color: color($colors, verde);
+  }
+
+  @media only screen and (min-width: 800px) {
+    ion-card {
+
+      width: 80% !important;
+      margin: 30px auto !important;
+
+    }
+  }
+
+
+}
